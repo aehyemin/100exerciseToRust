@@ -1,4 +1,4 @@
-/// Return `true` if `n` is even, `false` otherwise.
+/// Return `true` if `n` is even(짝수), `false` otherwise.
 fn is_even(n: u32) -> bool {
     todo!()
 }
