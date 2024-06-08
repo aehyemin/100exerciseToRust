@@ -9,42 +9,10 @@
 // `factorial(2)` to return `2`, and so on.
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
-/*
-5! = 5*4!
-8! = 8*7*6!
-3! = 3*2*1
-n! = n*(n-1)*(n-2)!
-n! = n*(n-1)!
-n! = factorial(n)
-*/
-fn factorial(n:u32) -> u32 {
-    // i 가 0이 아니면 n(n-1)...(n-(n-1))
-    // n 가 0이면 1
-    if n == 0 {
-        1
-    } else {
-        n*factorial(n-1)
-    }
-        /* 
-        let mut sum = 1;
-        for i in 1..=n {
-            sum = sum * i;
-        }
-        sum        
-    }
-    */
-}
-
-
-
-
-
 
 #[cfg(test)]
 mod tests {
     use crate::factorial;
-
-    
 
     #[test]
     fn first() {

@@ -1,12 +1,7 @@
 // Rewrite the factorial function using a `for` loop.
 pub fn factorial(n: u32) -> u32 {
-    let mut sum = 1;
-    for i in 1..=n {
-        sum *= i;
-    }
-    sum 
+    todo!()
 }
-// i 가 1부터 n-1까지 sum 에 i 를 1씩 더해가며 곱해준다
 
 #[cfg(test)]
 mod tests {
