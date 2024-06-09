@@ -1,7 +1,7 @@
 fn intro() -> &'static str {
     // TODO: fix me 👇
     "I'm ready to start modelling a software ticket!
-    git test2"
+    git test3"
 }
 
 #[cfg(test)]
