@@ -17,7 +17,34 @@ impl Ticket {
     // as well as some `String` methods. Use the documentation of Rust's standard library
     // to find the most appropriate options -> https://doc.rust-lang.org/std/string/struct.String.html
     fn new(title: String, description: String, status: String) -> Self {
-        todo!();
+        // fn new 를 구현해라.
+
+
+        //To-do, In Progress, Done 의 status 만 허용된다.
+        if status != "To-Do" && status != "In Progress" && status != "Done" {
+            panic!("Only `To-Do`, `In Progress`, and `Done` statuses are allowed");
+        }
+
+        
+        //title 이랑 description field 는 비어 있으면 안되고,
+        if title.is_empty() {
+            panic!("Title cannot be empty");
+        }
+
+        if description.is_empty() {
+            panic!("Description cannot be empty");
+        }
+        //title 은 최대 50바이트 초과하면 패닉
+        if title.len() > 50 {
+            panic!("Title cannot be longer than 50 bytes");
+        }
+        //description 은 최대 500바이트 초과하면 패닉
+        if description.len() > 500 {
+            panic!("Description cannot be longer than 500 bytes");
+        }
+
+
+
         Self {
             title,
             description,
