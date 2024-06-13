@@ -4,6 +4,7 @@ mod helpers {
     //  the appropriate path to refer to the `Ticket` struct.
 
    //1번 방법 use crate::Ticket;
+   // 왜 안돼
 
     fn create_todo_ticket(title: String, description: String) -> crate::Ticket {
        crate::Ticket::new(title, description, "To-Do".into())
