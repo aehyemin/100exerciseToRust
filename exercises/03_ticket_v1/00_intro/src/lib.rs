@@ -9,6 +9,6 @@ mod tests {
 
     #[test]
     fn test_intro() {
-        assert_eq!(intro(), "I'm ready to start modelling a software ticket!");
+        assert_eq!(intro(), "I'm ready to test start modelling a software ticket!");
     }
 }
