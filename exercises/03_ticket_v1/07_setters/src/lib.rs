@@ -2,7 +2,7 @@
 //   Make sure to enforce the same validation rules you have in `Ticket::new`!
 //   Even better, extract that logic and reuse it in both places. You can use
 //   private functions or private static methods for that.
-//
+
 pub struct Ticket {
     title: String,
     description: String,

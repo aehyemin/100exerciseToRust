@@ -1,4 +1,87 @@
 // TODO: Define a new `Order` type.
+pub struct Order {
+    product_name : String,
+    quantity : i32,
+    unit_price : i32,
+}
+
+
+// Order must include a method named `total` that 
+// returns the total price of the order.
+
+impl Order {
+    pub fn new(product_name:String, quantity:i32, unit_price:i32) -> Order {
+    if product_name.is_empty() || product_name.len() > 300 {
+        panic!("The product name can't be empty and it can't be longer than 300 bytes.");
+        } 
+        
+    if quantity <= 0 {
+        panic!("The quantity must be strictly greater than zero.");
+    }
+
+    if unit_price <= 0 {
+        panic!("The unit price is in cents and must be strictly greater than zero.");
+    }
+        Order{
+            product_name,
+            quantity,
+            unit_price,     
+        }
+    }
+
+
+    pub fn total(&self) -> i32{
+        &self.quantity * &self.unit_price
+    }
+
+    
+    pub fn product_name(&self) -> &String {
+        &self.product_name
+    }
+
+    pub fn quantity(&self) -> &i32 {
+        &self.quantity
+    }
+
+    pub fn unit_price(&self) -> &i32 {
+        &self.unit_price
+    }
+
+
+    
+    pub fn set_product_name(&mut self, new_product:String) {
+        self.product_name = new_product;
+    }
+
+
+    pub fn set_quantity(&mut self, new_quantity:i32) {
+        self.quantity = new_quantity;
+        
+        
+    }
+
+    pub fn set_unit_price(&mut self, new_price:i32) {
+        self.unit_price = new_price;
+    }
+
+}
+
+// fn check_validate(&self){
+//     if self.product_name.is_empty() || self.product_name.len() > 300 {
+//         panic!("The product name can't be empty and it can't be longer than 300 bytes.")
+//     }
+ 
+//     if self.quantity > 0 {
+//         panic!("The quantity must be strictly greater than zero.")
+//     }
+//     if self.unit_price > 0 {
+//         panic!("The unit price is in cents and must be strictly greater than zero.")
+//     }
+// }
+
+
+
+
 //   It should keep track of three pieces of information: `product_name`, `quantity`, and `unit_price`.
 //   The product name can't be empty and it can't be longer than 300 bytes.
 //   The quantity must be strictly greater than zero.
