@@ -18,7 +18,6 @@ impl Ticket {
 
     pub fn description(&self) -> &str {
         &self.description.trim()
-
         }
 }
 
