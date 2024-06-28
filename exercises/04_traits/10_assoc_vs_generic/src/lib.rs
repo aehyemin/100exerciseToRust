@@ -1,5 +1,45 @@
 // TODO: Define a new trait, `Power`, that has a method `power` that raises `self`
 //  to the power of `n`.
+
+pub trait Power<RHS = Self> {
+    type Output;
+
+    fn power(self, rhs: RHS) -> Self::Output;
+}
+
+impl Power<u16> for u32 {
+    type Output = u32;
+    fn power(self, rhs: u16) -> u32 {
+        let mut result = 1;
+        for i in 1..=rhs {
+            result = result*self;     
+        }
+        result
+    }
+}
+
+impl Power<u32> for u32 {
+    type Output = u32;
+    fn power(self, rhs: u32) -> u32 {
+        let mut result = 1;
+        for i in 1..=rhs {
+            result = result*self;     
+        }
+        result
+    }
+}
+
+impl Power<&u32> for u32 {
+    type Output = u32;
+    fn power(self, rhs: &u32) -> u32 {
+        let mut result = 1;
+
+        for i in 1..=*rhs {
+            result = result*self;     
+        }
+        result
+    }
+}
 //  The trait definition and its implementations should be enough to get
 //  the tests to compile and pass.
 //
